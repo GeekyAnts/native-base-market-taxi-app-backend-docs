@@ -6,20 +6,45 @@ Auth route contains login and logout routes. Also routes can be added which requ
 
 #### Login Route
 
-1. **API Path:**
-   api/auth/login
-2. **Method:**
-   POST
-3. **Description:**
-   Login route verifies email and password for the user. Once a user is authenticated, a token is generated.
+1. **API Path:** api/auth/login
+2. **Method:** POST
+3. **Description:** Login route verifies email and password for the user. Once a user is authenticated, a token is generated.
 4. **Parameters:**
    * Name: req
      Type: Object
-   * | Name | In | Type | Required |
-     | :--- | :--- | :--- | :--- |
-     | email | req.body | String | true |
-     | password | req.body | String | true |
-     | userType | req.body | String | true |
+
+<br/>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>In</th>
+                <th>Type</th>
+                <th>Required</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>email</td>
+                <td>req.body</td>
+                <td>String</td>
+                <td>true</td> 
+            </tr>
+            <tr>
+                <td>password</td>
+                <td>req.body</td>
+                <td>String</td>
+                <td>true</td> 
+            </tr>
+            <tr>
+                <td>userType</td>
+                <td>req.body</td>
+                <td>String</td>
+                <td>true</td> 
+            </tr>
+        </tbody>
+    </table><br />
+
    * Name: res
      Type: Object
 5. **Response:**
@@ -29,18 +54,38 @@ Auth route contains login and logout routes. Also routes can be added which requ
 * Http Code: 200
   Name: returnObj
   Type: Object
-* | Name | Type |
-  | :--- | :--- |
-  | success | boolean |
-  | message | String |
-  | data | Object |
+
+<br/>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>success</td>
+                <td>
+                   boolean
+                </td> 
+            </tr>
+            <tr>
+                <td>message</td>
+                <td>string</td>
+                  </tr>
+                    <tr>
+                <td>data</td>
+                <td>Object</td>
+                  </tr>
+        </tbody>
+    </table><br />
 
 
 
 #### LogOut Route
 
-1. **API Path:**
-   api/auth/logout
+1. **API Path:** api/auth/logout
 2. **Method:**
    GET
 3. **Description:**
@@ -59,11 +104,31 @@ Auth route contains login and logout routes. Also routes can be added which requ
    * Http Code: 200
      Name: returnObj
      Type: Object
-   * | Name | Type |
-     | :--- | :--- |
-     | success | boolean |
-     | message | String |
-     | data | Object |
 
+<br/>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>success</td>
+                <td>
+                   boolean
+                </td> 
+            </tr>
+            <tr>
+                <td>message</td>
+                <td>string</td>
+                  </tr>
+                    <tr>
+                <td>data</td>
+                <td>Object</td>
+                  </tr>
+        </tbody>
+    </table><br />
 
 

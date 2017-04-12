@@ -8,21 +8,54 @@ Contains route which register, update, view and delete the user details. These f
 
 
 
-1. **API Path:**
-   api/users/register
-2. **Description:**
-   Register route is used to register a new user. User can be either a Rider or a Driver. This route also checks if user has already been registered or not.
+1. **API Path:** api/users/register
+2. **Description:** Register route is used to register a new user. User can be either a Rider or a Driver. This route also checks if user has already been registered or not.
 3. **Parameters:**
    * Name: req
      Type: Object
-   * | Name | Type | Required |
-     | :--- | :--- | :--- |
-     | email | String | true |
-     | password | String | true |
-     | fname | String | true |
-     | lname | String | true |
-     | phoneNo | Number | true |
-     | userType | String | true |
+
+<br/>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Required</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>email</td>
+                <td>String</td> 
+                <td>true</td> 
+            </tr>
+            <tr>
+                <td>password</td>
+                <td>String</td> 
+                <td>true</td> 
+            </tr>
+            <tr>
+                <td>fname</td>
+                <td>String</td> 
+                <td>true</td> 
+            </tr>
+              <tr>
+                <td>lname</td>
+                <td>String</td> 
+                <td>true</td> 
+            </tr>
+              <tr>
+                <td>phoneNo</td>
+                <td>Number</td> 
+                <td>true</td> 
+            </tr>
+              <tr>
+                <td>userType</td>
+                <td>String</td> 
+                <td>true</td> 
+            </tr>
+        </tbody>
+    </table><br />
    * Name: res
      Type: Object
  
@@ -33,22 +66,39 @@ Contains route which register, update, view and delete the user details. These f
    * Http Code: 200
      Name: returnObj
      Type: Object
-   * | Name | Type |
-     | :--- | :--- |
-     | success | boolean |
-     | message | String |
-     | data | Object |
 
+<br/>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>success</td>
+                <td>
+                   boolean
+                </td> 
+            </tr>
+            <tr>
+                <td>message</td>
+                <td>string</td>
+                  </tr>
+                    <tr>
+                <td>data</td>
+                <td>Object</td>
+                  </tr>
+        </tbody>
+    </table><br />
 
 
 #### Get User Details Route
 
-1. **API Path:**
-   api/users
-2. **Method:**
-   GET
-3. **Description:**
-   This is a protected route which gets the user details through JWT access token which is provided in the header.
+1. **API Path:** api/users
+2. **Method:** GET
+3. **Description:** This is a protected route which gets the user details through JWT access token which is provided in the header.
 4. **Parameters:**
    * Name: req
      Type: Object
@@ -65,31 +115,75 @@ Contains route which register, update, view and delete the user details. These f
    * Http Code: 200
      Name: returnObj
      Type: Object
-   * | Name | Type |
-     | :--- | :--- |
-     | success | boolean |
-     | message | String |
-     | data | Object |
+
+<br/>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>success</td>
+                <td>
+                   boolean
+                </td> 
+            </tr>
+            <tr>
+                <td>message</td>
+                <td>string</td>
+                  </tr>
+                    <tr>
+                <td>data</td>
+                <td>Object</td>
+                  </tr>
+        </tbody>
+    </table><br />
 
 
 
 #### Update User Details Route
 
-1. **API Path:**
-   api/users
-2. **Method:**
-   PUT
-3. **Description:**
-   This is a protected route which update the user details.
+1. **API Path:** api/users
+2. **Method:** PUT
+3. **Description:** This is a protected route which update the user details.
 4. **Parameters:**
    * Name: req
-     Type: Object
-   * | Name | Type |
-     | :--- | :--- |
-     | email | String |
-     | fname | String |
-     | lname | String |
-     | phoneNo | Number |
+   * Type: Object
+
+<br/>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>email</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>fname</td>
+                <td>String</td>
+            </tr>
+              <tr>
+                <td>lname</td>
+                <td>String</td>
+            </tr>
+              <tr>
+                <td>phoneNo</td>
+                <td>Number</td>
+            </tr>
+        </tbody>
+    </table><br />
    * Name: jwtAccessToken
      In: Header
      Type: String
@@ -102,22 +196,40 @@ Contains route which register, update, view and delete the user details. These f
    * Http Code: 200
      Name: returnObj
      Type: Object
-   * | Name | Type |
-     | :--- | :--- |
-     | success | boolean |
-     | message | String |
-     | data | Object |
+
+<br/>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>success</td>
+                <td>
+                   boolean
+                </td> 
+            </tr>
+            <tr>
+                <td>message</td>
+                <td>string</td>
+                  </tr>
+                    <tr>
+                <td>data</td>
+                <td>Object</td>
+                  </tr>
+        </tbody>
+    </table><br />
 
 
 
 #### Delete User Details Route
 
-1. **API Path:**
-   api/users
-2. **Method:**
-   DELETE
-3. **Description:**
-   Remove a user from the database.
+1. **API Path:** api/users
+2. **Method:** DELETE
+3. **Description:** Remove a user from the database.
 4. **Parameters:**
    * Name: req
      Type: Object
@@ -134,11 +246,31 @@ Contains route which register, update, view and delete the user details. These f
    * Http Code: 200
      Name: returnObj
      Type: Object
-   * | Name | Type |
-     | :--- | :--- |
-     | success | boolean |
-     | message | String |
-     | data | Object |
 
+<br/>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>success</td>
+                <td>
+                   boolean
+                </td> 
+            </tr>
+            <tr>
+                <td>message</td>
+                <td>string</td>
+                  </tr>
+                    <tr>
+                <td>data</td>
+                <td>Object</td>
+                  </tr>
+        </tbody>
+    </table><br />
 
 

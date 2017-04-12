@@ -29,11 +29,32 @@ It has all the protected routes and contains route related to user trip. These f
    * Http Code: 200
      Name: returnObj
      Type: Object
-   * | Name | Type |
-     | :--- | :--- |
-     | success | boolean |
-     | message | String |
-     | data | \[{Object}\] |
+     
+<br/>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>success</td>
+                <td>
+                   boolean
+                </td> 
+            </tr>
+            <tr>
+                <td>message</td>
+                <td>string</td>
+                  </tr>
+                    <tr>
+                <td>data</td>
+                <td>Object</td>
+                  </tr>
+        </tbody>
+    </table><br />
 
 
 

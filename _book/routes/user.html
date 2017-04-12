@@ -17,14 +17,6 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-versions/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -418,26 +410,61 @@
 <p><strong>File Name:</strong> user.js<br><strong>File Path:</strong>  /server/routes/user.js<br>Contains route which register, update, view and delete the user details. These functionalities are included in User Controller.</p>
 <h4 id="registration-route">Registration Route</h4>
 <ol>
-<li><strong>API Path:</strong>
-api/users/register</li>
-<li><strong>Description:</strong>
-Register route is used to register a new user. User can be either a Rider or a Driver. This route also checks if user has already been registered or not.</li>
-<li><p><strong>Parameters:</strong></p>
-<ul>
+<li><strong>API Path:</strong> api/users/register</li>
+<li><strong>Description:</strong> Register route is used to register a new user. User can be either a Rider or a Driver. This route also checks if user has already been registered or not.</li>
+<li><strong>Parameters:</strong><ul>
 <li>Name: req
-Type: Object</li>
-<li>| Name | Type | Required |
-| :--- | :--- | :--- |
-| email | String | true |
-| password | String | true |
-| fname | String | true |
-| lname | String | true |
-| phoneNo | Number | true |
-| userType | String | true |</li>
-<li>Name: res
 Type: Object</li>
 </ul>
 </li>
+</ol>
+<p><br>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Required</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>email</td>
+                <td>String</td> 
+                <td>true</td> 
+            </tr>
+            <tr>
+                <td>password</td>
+                <td>String</td> 
+                <td>true</td> 
+            </tr>
+            <tr>
+                <td>fname</td>
+                <td>String</td> 
+                <td>true</td> 
+            </tr>
+              <tr>
+                <td>lname</td>
+                <td>String</td> 
+                <td>true</td> 
+            </tr>
+              <tr>
+                <td>phoneNo</td>
+                <td>Number</td> 
+                <td>true</td> 
+            </tr>
+              <tr>
+                <td>userType</td>
+                <td>String</td> 
+                <td>true</td> 
+            </tr>
+        </tbody>
+    </table><br></p>
+<ul>
+<li>Name: res
+Type: Object</li>
+</ul>
+<ol>
 <li><p><strong>Response:</strong>
 Returns an object with three properties: success (bool), message, data.
 The third parameter data is an object with two properties: jwtAccessToken and user object.</p>
@@ -445,22 +472,39 @@ The third parameter data is an object with two properties: jwtAccessToken and us
 <li>Http Code: 200
 Name: returnObj
 Type: Object</li>
-<li>| Name | Type |
-| :--- | :--- |
-| success | boolean |
-| message | String |
-| data | Object |</li>
 </ul>
 </li>
 </ol>
+<p><br>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>success</td>
+                <td>
+                   boolean
+                </td> 
+            </tr>
+            <tr>
+                <td>message</td>
+                <td>string</td>
+                  </tr>
+                    <tr>
+                <td>data</td>
+                <td>Object</td>
+                  </tr>
+        </tbody>
+    </table><br></p>
 <h4 id="get-user-details-route">Get User Details Route</h4>
 <ol>
-<li><strong>API Path:</strong>
-api/users</li>
-<li><strong>Method:</strong>
-GET</li>
-<li><strong>Description:</strong>
-This is a protected route which gets the user details through JWT access token which is provided in the header.</li>
+<li><strong>API Path:</strong> api/users</li>
+<li><strong>Method:</strong> GET</li>
+<li><strong>Description:</strong> This is a protected route which gets the user details through JWT access token which is provided in the header.</li>
 <li><strong>Parameters:</strong><ul>
 <li>Name: req
 Type: Object</li>
@@ -481,36 +525,80 @@ Description: res is nothing but the response object which gets you the user deta
 <li>Http Code: 200
 Name: returnObj
 Type: Object</li>
-<li>| Name | Type |
-| :--- | :--- |
-| success | boolean |
-| message | String |
-| data | Object |</li>
 </ul>
+<p><br>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>success</td>
+                <td>
+                   boolean
+                </td> 
+            </tr>
+            <tr>
+                <td>message</td>
+                <td>string</td>
+                  </tr>
+                    <tr>
+                <td>data</td>
+                <td>Object</td>
+                  </tr>
+        </tbody>
+    </table><br></p>
 <h4 id="update-user-details-route">Update User Details Route</h4>
 <ol>
-<li><strong>API Path:</strong>
-api/users</li>
-<li><strong>Method:</strong>
-PUT</li>
-<li><strong>Description:</strong>
-This is a protected route which update the user details.</li>
+<li><strong>API Path:</strong> api/users</li>
+<li><strong>Method:</strong> PUT</li>
+<li><strong>Description:</strong> This is a protected route which update the user details.</li>
 <li><strong>Parameters:</strong><ul>
-<li>Name: req
-Type: Object</li>
-<li>| Name | Type |
-| :--- | :--- |
-| email | String |
-| fname | String |
-| lname | String |
-| phoneNo | Number |</li>
+<li>Name: req</li>
+<li>Type: Object</li>
+</ul>
+</li>
+</ol>
+<p><br>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>email</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>fname</td>
+                <td>String</td>
+            </tr>
+              <tr>
+                <td>lname</td>
+                <td>String</td>
+            </tr>
+              <tr>
+                <td>phoneNo</td>
+                <td>Number</td>
+            </tr>
+        </tbody>
+    </table><br></p>
+<ul>
 <li>Name: jwtAccessToken
 In: Header
 Type: String
 Description: JWT access token is used to check the authenticity of the user.</li>
 </ul>
-</li>
-</ol>
 <ul>
 <li>Name: res
 Type: Object<ol>
@@ -520,20 +608,37 @@ Type: Object<ol>
 <li>Http Code: 200
 Name: returnObj
 Type: Object</li>
-<li>| Name | Type |
-| :--- | :--- |
-| success | boolean |
-| message | String |
-| data | Object |</li>
 </ul>
+<p><br>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>success</td>
+                <td>
+                   boolean
+                </td> 
+            </tr>
+            <tr>
+                <td>message</td>
+                <td>string</td>
+                  </tr>
+                    <tr>
+                <td>data</td>
+                <td>Object</td>
+                  </tr>
+        </tbody>
+    </table><br></p>
 <h4 id="delete-user-details-route">Delete User Details Route</h4>
 <ol>
-<li><strong>API Path:</strong>
-api/users</li>
-<li><strong>Method:</strong>
-DELETE</li>
-<li><strong>Description:</strong>
-Remove a user from the database.</li>
+<li><strong>API Path:</strong> api/users</li>
+<li><strong>Method:</strong> DELETE</li>
+<li><strong>Description:</strong> Remove a user from the database.</li>
 <li><strong>Parameters:</strong><ul>
 <li>Name: req
 Type: Object</li>
@@ -554,12 +659,32 @@ Type: Object<ol>
 <li>Http Code: 200
 Name: returnObj
 Type: Object</li>
-<li>| Name | Type |
-| :--- | :--- |
-| success | boolean |
-| message | String |
-| data | Object |</li>
 </ul>
+<p><br>
+   <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>success</td>
+                <td>
+                   boolean
+                </td> 
+            </tr>
+            <tr>
+                <td>message</td>
+                <td>string</td>
+                  </tr>
+                    <tr>
+                <td>data</td>
+                <td>Object</td>
+                  </tr>
+        </tbody>
+    </table><br></p>
 
                                 
                                 </section>
@@ -603,7 +728,7 @@ Type: Object</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Routes","level":"1.7","depth":1,"next":{"title":"User","level":"1.7.1","depth":2,"path":"routes/user.md","ref":"routes/user.md","articles":[]},"previous":{"title":"Update User Details","level":"1.6.7","depth":2,"path":"sequence-diagrams/update-user-details.md","ref":"sequence-diagrams/update-user-details.md","articles":[]},"dir":"ltr"},"config":{"plugins":["versions","ace","edit-link","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"versions":{"type":"branches","gitbookConfigURL":"https://docs.market.nativebase.io/react-native-taxi-app-with-backend/","options":[{"value":"https://docs.market.nativebase.io/react-native-taxi-app-with-backend/","text":"latest"},{"value":"https://docs.market.nativebase.io/react-native-taxi-app-with-backend/","text":"-- select version --","selected":false}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/GeekyAnts/native-base-market-taxi-app-backend-docs/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"TaxiApp-Backend","gitbook":"*"},"file":{"path":"routes/user.md","mtime":"2017-04-12T12:40:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-12T14:09:11.004Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Routes","level":"1.7","depth":1,"next":{"title":"User","level":"1.7.1","depth":2,"path":"routes/user.md","ref":"routes/user.md","articles":[]},"previous":{"title":"Update User Details","level":"1.6.7","depth":2,"path":"sequence-diagrams/update-user-details.md","ref":"sequence-diagrams/update-user-details.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/GeekyAnts/native-base-market-taxi-app-backend-docs/tree/master"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"TaxiApp-Backend","gitbook":"*"},"file":{"path":"routes/user.md","mtime":"2017-04-12T18:26:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-12T18:04:41.314Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -611,18 +736,6 @@ Type: Object</li>
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-versions/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>

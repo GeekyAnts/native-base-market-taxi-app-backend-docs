@@ -1,28 +1,12 @@
 {
     "title": "TaxiApp-Backend",
     "plugins": [
-        "versions",
-        "ace",
         "edit-link"
     ],
     "pluginsConfig": {
         "edit-link": {
             "base": "https://github.com/GeekyAnts/native-base-market-taxi-app-backend-docs/tree/master",
             "label": "Edit This Page"
-        },
-        "versions": {
-            "gitbookConfigURL": "https://docs.market.nativebase.io/react-native-taxi-app-with-backend/",
-            "options": [
-                {
-                    "value": "https://docs.market.nativebase.io/react-native-taxi-app-with-backend/",
-                    "text": "latest"
-                },
-                {
-                    "value": "https://docs.market.nativebase.io/react-native-taxi-app-with-backend/",
-                    "text": "-- select version --",
-                    "selected": false
-                }
-            ]
         }
     }
 }
