@@ -1,0 +1,23 @@
+# Summary
+
+* [Introduction](README.md)
+* [Technologies](technology.md)
+* [Installation](installation.md)
+* [Outline](outline.md)
+* [ER Diagrams](er-diagrams.md)
+* [Sequence Diagrams](sequence-diagrams.md)
+  * [Login](sequence-diagrams/login.md)
+  * [Socket Auth](sequence-diagrams/socket-auth.md)
+  * [Trip Request](sequence-diagrams/trip-request.md)
+  * [Start Trip](sequence-diagrams/start-trip.md)
+  * [Cancel Trip Request](sequence-diagrams/cancel-trip-request.md)
+  * [Update Location](sequence-diagrams/update-location.md)
+  * [Update User Details](sequence-diagrams/update-user-details.md)
+* [Routes](routes/user.md)
+  * [User](routes/user.md)
+  * [Auth](routes/auth.md)
+  * [Trip](routes/trip.md)
+* [Socket](socket.md)
+* [Service](service.md)
+* [License](license.md)
+
