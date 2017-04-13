@@ -10,10 +10,9 @@ Auth route contains login and logout routes. Also routes can be added which requ
 2. **Method:** POST
 3. **Description:** Login route verifies email and password for the user. Once a user is authenticated, a token is generated.
 4. **Parameters:**
-   * Name: req
-     Type: Object
+   * Name: req 
+   * Type: Object
 
-<br/>
    <table class="table table-bordered">
         <thead>
             <tr>
@@ -43,19 +42,16 @@ Auth route contains login and logout routes. Also routes can be added which requ
                 <td>true</td> 
             </tr>
         </tbody>
-    </table><br />
+    </table>
 
-   * Name: res
-     Type: Object
 5. **Response:**
    Returns an object with three properties: success \(bool\), message, data.
    The third parameterdata is an object with two properties: jwtAccessToken and user object.
 
-* Http Code: 200
-  Name: returnObj
-  Type: Object
+  * Http Code: 200 
+  * Name: returnObj 
+  * Type: Object
 
-<br/>
    <table class="table table-bordered">
         <thead>
             <tr>
@@ -79,8 +75,7 @@ Auth route contains login and logout routes. Also routes can be added which requ
                 <td>Object</td>
                   </tr>
         </tbody>
-    </table><br />
-
+    </table>
 
 
 #### LogOut Route
@@ -91,21 +86,18 @@ Auth route contains login and logout routes. Also routes can be added which requ
 3. **Description:**
    This is a protected route which requires authentication token in the header. Logout route simply changes the login status and logouts the user from the database.
 4. **Parameters:**
-   * Name: Authorization
-     In: Header
-     Description: Contains JWT access token required to check the authenticity of the user who makes a API call.
+   * Name: Authorization 
+   * In: Header 
+   * Description: Contains JWT access token required to check the authenticity of the user who makes a API call.
 
 
-   * Name: res
-     Type: Object
- 
 5. **Response:**
    Returns an object with three properties: success \(bool\), message, data. The third parameterdata is an object with two properties: jwtAccessToken and user object.
-   * Http Code: 200
-     Name: returnObj
-     Type: Object
 
-<br/>
+   * Http Code: 200 
+   * Name: returnObj 
+   * Type: Object
+
    <table class="table table-bordered">
         <thead>
             <tr>
@@ -129,6 +121,6 @@ Auth route contains login and logout routes. Also routes can be added which requ
                 <td>Object</td>
                   </tr>
         </tbody>
-    </table><br />
+    </table>
 
 

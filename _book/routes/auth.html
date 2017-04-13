@@ -413,82 +413,78 @@
 <li><strong>API Path:</strong> api/auth/login</li>
 <li><strong>Method:</strong> POST</li>
 <li><strong>Description:</strong> Login route verifies email and password for the user. Once a user is authenticated, a token is generated.</li>
-<li><strong>Parameters:</strong><ul>
-<li>Name: req
-Type: Object</li>
-</ul>
-</li>
-</ol>
-<p><br>
-   <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>In</th>
-                <th>Type</th>
-                <th>Required</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>email</td>
-                <td>req.body</td>
-                <td>String</td>
-                <td>true</td> 
-            </tr>
-            <tr>
-                <td>password</td>
-                <td>req.body</td>
-                <td>String</td>
-                <td>true</td> 
-            </tr>
-            <tr>
-                <td>userType</td>
-                <td>req.body</td>
-                <td>String</td>
-                <td>true</td> 
-            </tr>
-        </tbody>
-    </table><br></p>
+<li><p><strong>Parameters:</strong></p>
 <ul>
-<li>Name: res
-Type: Object<ol>
-<li><strong>Response:</strong>
+<li>Name: req </li>
+<li>Type: Object</li>
+</ul>
+<table class="table table-bordered">
+     <thead>
+         <tr>
+             <th>Name</th>
+             <th>In</th>
+             <th>Type</th>
+             <th>Required</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr>
+             <td>email</td>
+             <td>req.body</td>
+             <td>String</td>
+             <td>true</td> 
+         </tr>
+         <tr>
+             <td>password</td>
+             <td>req.body</td>
+             <td>String</td>
+             <td>true</td> 
+         </tr>
+         <tr>
+             <td>userType</td>
+             <td>req.body</td>
+             <td>String</td>
+             <td>true</td> 
+         </tr>
+     </tbody>
+ </table>
+</li>
+<li><p><strong>Response:</strong>
 Returns an object with three properties: success (bool), message, data.
-The third parameterdata is an object with two properties: jwtAccessToken and user object.</li>
-</ol>
-</li>
-</ul>
+The third parameterdata is an object with two properties: jwtAccessToken and user object.</p>
 <ul>
-<li>Http Code: 200
-Name: returnObj
-Type: Object</li>
+<li>Http Code: 200 </li>
+<li>Name: returnObj </li>
+<li>Type: Object</li>
 </ul>
-<p><br>
-   <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Type</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>success</td>
-                <td>
-                   boolean
-                </td> 
-            </tr>
-            <tr>
-                <td>message</td>
-                <td>string</td>
-                  </tr>
-                    <tr>
-                <td>data</td>
-                <td>Object</td>
-                  </tr>
-        </tbody>
-    </table><br></p>
+<table class="table table-bordered">
+     <thead>
+         <tr>
+             <th>Name</th>
+             <th>Type</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr>
+             <td>success</td>
+             <td>
+                boolean
+             </td> 
+         </tr>
+         <tr>
+             <td>message</td>
+             <td>string</td>
+               </tr>
+                 <tr>
+             <td>data</td>
+             <td>Object</td>
+               </tr>
+     </tbody>
+ </table>
+
+
+</li>
+</ol>
 <h4 id="logout-route">LogOut Route</h4>
 <ol>
 <li><strong>API Path:</strong> api/auth/logout</li>
@@ -497,50 +493,48 @@ GET</li>
 <li><strong>Description:</strong>
 This is a protected route which requires authentication token in the header. Logout route simply changes the login status and logouts the user from the database.</li>
 <li><strong>Parameters:</strong><ul>
-<li>Name: Authorization
-In: Header
-Description: Contains JWT access token required to check the authenticity of the user who makes a API call.</li>
+<li>Name: Authorization </li>
+<li>In: Header </li>
+<li>Description: Contains JWT access token required to check the authenticity of the user who makes a API call.</li>
 </ul>
 </li>
 </ol>
-<ul>
-<li>Name: res
-Type: Object</li>
-</ul>
 <ol>
-<li><strong>Response:</strong>
-Returns an object with three properties: success (bool), message, data. The third parameterdata is an object with two properties: jwtAccessToken and user object.<ul>
-<li>Http Code: 200
-Name: returnObj
-Type: Object</li>
+<li><p><strong>Response:</strong>
+Returns an object with three properties: success (bool), message, data. The third parameterdata is an object with two properties: jwtAccessToken and user object.</p>
+<ul>
+<li>Http Code: 200 </li>
+<li>Name: returnObj </li>
+<li>Type: Object</li>
 </ul>
+<table class="table table-bordered">
+     <thead>
+         <tr>
+             <th>Name</th>
+             <th>Type</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr>
+             <td>success</td>
+             <td>
+                boolean
+             </td> 
+         </tr>
+         <tr>
+             <td>message</td>
+             <td>string</td>
+               </tr>
+                 <tr>
+             <td>data</td>
+             <td>Object</td>
+               </tr>
+     </tbody>
+ </table>
+
+
 </li>
 </ol>
-<p><br>
-   <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Type</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>success</td>
-                <td>
-                   boolean
-                </td> 
-            </tr>
-            <tr>
-                <td>message</td>
-                <td>string</td>
-                  </tr>
-                    <tr>
-                <td>data</td>
-                <td>Object</td>
-                  </tr>
-        </tbody>
-    </table><br></p>
 
                                 
                                 </section>
@@ -584,7 +578,7 @@ Type: Object</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Auth","level":"1.7.2","depth":2,"next":{"title":"Trip","level":"1.7.3","depth":2,"path":"routes/trip.md","ref":"routes/trip.md","articles":[]},"previous":{"title":"User","level":"1.7.1","depth":2,"path":"routes/user.md","ref":"routes/user.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/GeekyAnts/native-base-market-taxi-app-backend-docs/tree/master"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"TaxiApp-Backend","gitbook":"*"},"file":{"path":"routes/auth.md","mtime":"2017-04-12T18:19:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-12T18:28:48.222Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Auth","level":"1.7.2","depth":2,"next":{"title":"Trip","level":"1.7.3","depth":2,"path":"routes/trip.md","ref":"routes/trip.md","articles":[]},"previous":{"title":"User","level":"1.7.1","depth":2,"path":"routes/user.md","ref":"routes/user.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/GeekyAnts/native-base-market-taxi-app-backend-docs/tree/master"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"TaxiApp-Backend","gitbook":"*"},"file":{"path":"routes/auth.md","mtime":"2017-04-13T07:45:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-13T08:06:36.942Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

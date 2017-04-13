@@ -12,9 +12,8 @@ Contains route which register, update, view and delete the user details. These f
 2. **Description:** Register route is used to register a new user. User can be either a Rider or a Driver. This route also checks if user has already been registered or not.
 3. **Parameters:**
    * Name: req
-     Type: Object
+   * Type: Object
 
-<br/>
    <table class="table table-bordered">
         <thead>
             <tr>
@@ -55,19 +54,16 @@ Contains route which register, update, view and delete the user details. These f
                 <td>true</td> 
             </tr>
         </tbody>
-    </table><br />
-   * Name: res
-     Type: Object
- 
+    </table>
+
 4. **Response:**
    Returns an object with three properties: success \(bool\), message, data.
    The third parameter data is an object with two properties: jwtAccessToken and user object.
 
-   * Http Code: 200
-     Name: returnObj
-     Type: Object
+   * Http Code: 200 
+   * Name: returnObj
+   * Type: Object
 
-<br/>
    <table class="table table-bordered">
         <thead>
             <tr>
@@ -91,7 +87,7 @@ Contains route which register, update, view and delete the user details. These f
                 <td>Object</td>
                   </tr>
         </tbody>
-    </table><br />
+    </table>
 
 
 #### Get User Details Route
@@ -100,23 +96,23 @@ Contains route which register, update, view and delete the user details. These f
 2. **Method:** GET
 3. **Description:** This is a protected route which gets the user details through JWT access token which is provided in the header.
 4. **Parameters:**
-   * Name: req
-     Type: Object
-   * Name: jwtAccessToken
-     In: Header
-     Type: String
-     Description: JWT access token is used to check the authenticity of the user.
+
+   * Name: jwtAccessToken 
+   * In: Header 
+   * Type: String 
+   * Description: JWT access token is used to check the authenticity of the user.
 
 
-   * Name: res
-     Type: Object
-     Description: res is nothing but the response object which gets you the user details.
+   * Name: res 
+   * Type: Object 
+   * Description: res is nothing but the response object which gets you the user details.
+
 5. **Response:**
-   * Http Code: 200
-     Name: returnObj
-     Type: Object
 
-<br/>
+  * Http Code: 200 
+  * Name: returnObj 
+  * Type: Object
+
    <table class="table table-bordered">
         <thead>
             <tr>
@@ -140,7 +136,7 @@ Contains route which register, update, view and delete the user details. These f
                 <td>Object</td>
                   </tr>
         </tbody>
-    </table><br />
+    </table>
 
 
 
@@ -150,10 +146,10 @@ Contains route which register, update, view and delete the user details. These f
 2. **Method:** PUT
 3. **Description:** This is a protected route which update the user details.
 4. **Parameters:**
+
    * Name: req
    * Type: Object
 
-<br/>
    <table class="table table-bordered">
         <thead>
             <tr>
@@ -183,21 +179,19 @@ Contains route which register, update, view and delete the user details. These f
                 <td>Number</td>
             </tr>
         </tbody>
-    </table><br />
-   * Name: jwtAccessToken
-     In: Header
-     Type: String
-     Description: JWT access token is used to check the authenticity of the user.
+    </table>
+
+   * Name: jwtAccessToken 
+   * In: Header 
+   * Type: String 
+   * Description: JWT access token is used to check the authenticity of the user.
 
 
-   * Name: res
-     Type: Object
 5. **Response:**
-   * Http Code: 200
-     Name: returnObj
-     Type: Object
+   * Http Code: 200 
+   * Name: returnObj 
+   * Type: Object
 
-<br/>
    <table class="table table-bordered">
         <thead>
             <tr>
@@ -221,7 +215,7 @@ Contains route which register, update, view and delete the user details. These f
                 <td>Object</td>
                   </tr>
         </tbody>
-    </table><br />
+    </table>
 
 
 
@@ -231,23 +225,23 @@ Contains route which register, update, view and delete the user details. These f
 2. **Method:** DELETE
 3. **Description:** Remove a user from the database.
 4. **Parameters:**
-   * Name: req
-     Type: Object
+   * Name: req 
+   * Type: Object
 
 
-   * Name: jwtAccessToken
-     In: Header
-     Type: String
+   * Name: jwtAccessToken 
+   * In: Header 
+   * Type: String
 
 
-   * Name: res
-     Type: Object
+   * Name: res 
+   * Type: Object
+     
 5. **Response:**
-   * Http Code: 200
-     Name: returnObj
-     Type: Object
+   * Http Code: 200 
+   * Name: returnObj 
+   * Type: Object
 
-<br/>
    <table class="table table-bordered">
         <thead>
             <tr>
@@ -271,6 +265,6 @@ Contains route which register, update, view and delete the user details. These f
                 <td>Object</td>
                   </tr>
         </tbody>
-    </table><br />
+    </table>
 
 

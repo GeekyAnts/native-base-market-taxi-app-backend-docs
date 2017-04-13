@@ -6,8 +6,7 @@ SocketStore class is used to manage operation related to socket. It contains a s
 
 #### addByUserId\(\)
 
-* **Description:**
-  Used to add socket to the store with which user is connected to. This function maps between the socket and userId. By doing this we store all the sockets at one place that correspond to the user.
+* **Description:** Used to add socket to the store with which user is connected to. This function maps between the socket and userId. By doing this we store all the sockets at one place that correspond to the user.
 * **Parameter:**
   * Name : userId
     Type: Schema.Types.ObjectId
@@ -23,8 +22,7 @@ SocketStore class is used to manage operation related to socket. It contains a s
 
 #### getByuserId\(\)
 
-* **Description:**
-  Used to get all the socket objects to which user is connected.
+* **Description:** Used to get all the socket objects to which user is connected.
 * **Parameter:**
   * Name : userId
     Type: Schema.Types.ObjectId
@@ -35,8 +33,7 @@ SocketStore class is used to manage operation related to socket. It contains a s
 
 #### emitByUserId\(\)
 
-* **Description:**
-  Emits an event to the user whose userId is provided in the parameters. This emits event to all the sockets to which user is connected.
+* **Description:** Emits an event to the user whose userId is provided in the parameters. This emits event to all the sockets to which user is connected.
 * **Parameter:**
   * Name : userId
     Type: Schema.Types.ObjectId

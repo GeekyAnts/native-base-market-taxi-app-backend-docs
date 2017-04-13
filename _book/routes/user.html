@@ -412,279 +412,284 @@
 <ol>
 <li><strong>API Path:</strong> api/users/register</li>
 <li><strong>Description:</strong> Register route is used to register a new user. User can be either a Rider or a Driver. This route also checks if user has already been registered or not.</li>
-<li><strong>Parameters:</strong><ul>
-<li>Name: req
-Type: Object</li>
-</ul>
-</li>
-</ol>
-<p><br>
-   <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Required</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>email</td>
-                <td>String</td> 
-                <td>true</td> 
-            </tr>
-            <tr>
-                <td>password</td>
-                <td>String</td> 
-                <td>true</td> 
-            </tr>
-            <tr>
-                <td>fname</td>
-                <td>String</td> 
-                <td>true</td> 
-            </tr>
-              <tr>
-                <td>lname</td>
-                <td>String</td> 
-                <td>true</td> 
-            </tr>
-              <tr>
-                <td>phoneNo</td>
-                <td>Number</td> 
-                <td>true</td> 
-            </tr>
-              <tr>
-                <td>userType</td>
-                <td>String</td> 
-                <td>true</td> 
-            </tr>
-        </tbody>
-    </table><br></p>
+<li><p><strong>Parameters:</strong></p>
 <ul>
-<li>Name: res
-Type: Object</li>
+<li>Name: req</li>
+<li>Type: Object</li>
 </ul>
-<ol>
+<table class="table table-bordered">
+     <thead>
+         <tr>
+             <th>Name</th>
+             <th>Type</th>
+             <th>Required</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr>
+             <td>email</td>
+             <td>String</td> 
+             <td>true</td> 
+         </tr>
+         <tr>
+             <td>password</td>
+             <td>String</td> 
+             <td>true</td> 
+         </tr>
+         <tr>
+             <td>fname</td>
+             <td>String</td> 
+             <td>true</td> 
+         </tr>
+           <tr>
+             <td>lname</td>
+             <td>String</td> 
+             <td>true</td> 
+         </tr>
+           <tr>
+             <td>phoneNo</td>
+             <td>Number</td> 
+             <td>true</td> 
+         </tr>
+           <tr>
+             <td>userType</td>
+             <td>String</td> 
+             <td>true</td> 
+         </tr>
+     </tbody>
+ </table>
+</li>
 <li><p><strong>Response:</strong>
 Returns an object with three properties: success (bool), message, data.
 The third parameter data is an object with two properties: jwtAccessToken and user object.</p>
 <ul>
-<li>Http Code: 200
-Name: returnObj
-Type: Object</li>
+<li>Http Code: 200 </li>
+<li>Name: returnObj</li>
+<li>Type: Object</li>
 </ul>
+<table class="table table-bordered">
+     <thead>
+         <tr>
+             <th>Name</th>
+             <th>Type</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr>
+             <td>success</td>
+             <td>
+                boolean
+             </td> 
+         </tr>
+         <tr>
+             <td>message</td>
+             <td>string</td>
+               </tr>
+                 <tr>
+             <td>data</td>
+             <td>Object</td>
+               </tr>
+     </tbody>
+ </table>
+
+
 </li>
 </ol>
-<p><br>
-   <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Type</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>success</td>
-                <td>
-                   boolean
-                </td> 
-            </tr>
-            <tr>
-                <td>message</td>
-                <td>string</td>
-                  </tr>
-                    <tr>
-                <td>data</td>
-                <td>Object</td>
-                  </tr>
-        </tbody>
-    </table><br></p>
 <h4 id="get-user-details-route">Get User Details Route</h4>
 <ol>
 <li><strong>API Path:</strong> api/users</li>
 <li><strong>Method:</strong> GET</li>
 <li><strong>Description:</strong> This is a protected route which gets the user details through JWT access token which is provided in the header.</li>
-<li><strong>Parameters:</strong><ul>
-<li>Name: req
-Type: Object</li>
-<li>Name: jwtAccessToken
-In: Header
-Type: String
-Description: JWT access token is used to check the authenticity of the user.</li>
+<li><p><strong>Parameters:</strong></p>
+<ul>
+<li>Name: jwtAccessToken </li>
+<li>In: Header </li>
+<li>Type: String </li>
+<li>Description: JWT access token is used to check the authenticity of the user.</li>
 </ul>
 </li>
 </ol>
 <ul>
-<li>Name: res
-Type: Object
-Description: res is nothing but the response object which gets you the user details.<ol>
-<li><strong>Response:</strong></li>
-</ol>
-</li>
-<li>Http Code: 200
-Name: returnObj
-Type: Object</li>
+<li>Name: res </li>
+<li>Type: Object </li>
+<li>Description: res is nothing but the response object which gets you the user details.</li>
 </ul>
-<p><br>
-   <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Type</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>success</td>
-                <td>
-                   boolean
-                </td> 
-            </tr>
-            <tr>
-                <td>message</td>
-                <td>string</td>
-                  </tr>
-                    <tr>
-                <td>data</td>
-                <td>Object</td>
-                  </tr>
-        </tbody>
-    </table><br></p>
+<ol>
+<li><p><strong>Response:</strong></p>
+<ul>
+<li>Http Code: 200 </li>
+<li>Name: returnObj </li>
+<li>Type: Object</li>
+</ul>
+<table class="table table-bordered">
+     <thead>
+         <tr>
+             <th>Name</th>
+             <th>Type</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr>
+             <td>success</td>
+             <td>
+                boolean
+             </td> 
+         </tr>
+         <tr>
+             <td>message</td>
+             <td>string</td>
+               </tr>
+                 <tr>
+             <td>data</td>
+             <td>Object</td>
+               </tr>
+     </tbody>
+ </table>
+
+
+
+</li>
+</ol>
 <h4 id="update-user-details-route">Update User Details Route</h4>
 <ol>
 <li><strong>API Path:</strong> api/users</li>
 <li><strong>Method:</strong> PUT</li>
 <li><strong>Description:</strong> This is a protected route which update the user details.</li>
-<li><strong>Parameters:</strong><ul>
+<li><p><strong>Parameters:</strong></p>
+<ul>
 <li>Name: req</li>
 <li>Type: Object</li>
 </ul>
+<table class="table table-bordered">
+     <thead>
+         <tr>
+             <th>Name</th>
+             <th>Type</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr>
+             <td>email</td>
+             <td>String</td>
+         </tr>
+         <tr>
+             <td>password</td>
+             <td>String</td>
+         </tr>
+         <tr>
+             <td>fname</td>
+             <td>String</td>
+         </tr>
+           <tr>
+             <td>lname</td>
+             <td>String</td>
+         </tr>
+           <tr>
+             <td>phoneNo</td>
+             <td>Number</td>
+         </tr>
+     </tbody>
+ </table>
+
+<ul>
+<li>Name: jwtAccessToken </li>
+<li>In: Header </li>
+<li>Type: String </li>
+<li>Description: JWT access token is used to check the authenticity of the user.</li>
+</ul>
 </li>
 </ol>
-<p><br>
-   <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Type</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>email</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>password</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>fname</td>
-                <td>String</td>
-            </tr>
-              <tr>
-                <td>lname</td>
-                <td>String</td>
-            </tr>
-              <tr>
-                <td>phoneNo</td>
-                <td>Number</td>
-            </tr>
-        </tbody>
-    </table><br></p>
+<ol>
+<li><p><strong>Response:</strong></p>
 <ul>
-<li>Name: jwtAccessToken
-In: Header
-Type: String
-Description: JWT access token is used to check the authenticity of the user.</li>
+<li>Http Code: 200 </li>
+<li>Name: returnObj </li>
+<li>Type: Object</li>
 </ul>
-<ul>
-<li>Name: res
-Type: Object<ol>
-<li><strong>Response:</strong></li>
-</ol>
+<table class="table table-bordered">
+     <thead>
+         <tr>
+             <th>Name</th>
+             <th>Type</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr>
+             <td>success</td>
+             <td>
+                boolean
+             </td> 
+         </tr>
+         <tr>
+             <td>message</td>
+             <td>string</td>
+               </tr>
+                 <tr>
+             <td>data</td>
+             <td>Object</td>
+               </tr>
+     </tbody>
+ </table>
+
+
+
 </li>
-<li>Http Code: 200
-Name: returnObj
-Type: Object</li>
-</ul>
-<p><br>
-   <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Type</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>success</td>
-                <td>
-                   boolean
-                </td> 
-            </tr>
-            <tr>
-                <td>message</td>
-                <td>string</td>
-                  </tr>
-                    <tr>
-                <td>data</td>
-                <td>Object</td>
-                  </tr>
-        </tbody>
-    </table><br></p>
+</ol>
 <h4 id="delete-user-details-route">Delete User Details Route</h4>
 <ol>
 <li><strong>API Path:</strong> api/users</li>
 <li><strong>Method:</strong> DELETE</li>
 <li><strong>Description:</strong> Remove a user from the database.</li>
 <li><strong>Parameters:</strong><ul>
-<li>Name: req
-Type: Object</li>
+<li>Name: req </li>
+<li>Type: Object</li>
 </ul>
 </li>
 </ol>
 <ul>
-<li>Name: jwtAccessToken
-In: Header
-Type: String</li>
+<li>Name: jwtAccessToken </li>
+<li>In: Header </li>
+<li>Type: String</li>
 </ul>
 <ul>
-<li>Name: res
-Type: Object<ol>
-<li><strong>Response:</strong></li>
-</ol>
-</li>
-<li>Http Code: 200
-Name: returnObj
-Type: Object</li>
+<li>Name: res </li>
+<li>Type: Object</li>
 </ul>
-<p><br>
-   <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Type</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>success</td>
-                <td>
-                   boolean
-                </td> 
-            </tr>
-            <tr>
-                <td>message</td>
-                <td>string</td>
-                  </tr>
-                    <tr>
-                <td>data</td>
-                <td>Object</td>
-                  </tr>
-        </tbody>
-    </table><br></p>
+<ol>
+<li><p><strong>Response:</strong></p>
+<ul>
+<li>Http Code: 200 </li>
+<li>Name: returnObj </li>
+<li>Type: Object</li>
+</ul>
+<table class="table table-bordered">
+     <thead>
+         <tr>
+             <th>Name</th>
+             <th>Type</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr>
+             <td>success</td>
+             <td>
+                boolean
+             </td> 
+         </tr>
+         <tr>
+             <td>message</td>
+             <td>string</td>
+               </tr>
+                 <tr>
+             <td>data</td>
+             <td>Object</td>
+               </tr>
+     </tbody>
+ </table>
+
+
+</li>
+</ol>
 
                                 
                                 </section>
@@ -728,7 +733,7 @@ Type: Object</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Routes","level":"1.7","depth":1,"next":{"title":"User","level":"1.7.1","depth":2,"path":"routes/user.md","ref":"routes/user.md","articles":[]},"previous":{"title":"Update User Details","level":"1.6.7","depth":2,"path":"sequence-diagrams/update-user-details.md","ref":"sequence-diagrams/update-user-details.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/GeekyAnts/native-base-market-taxi-app-backend-docs/tree/master"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"TaxiApp-Backend","gitbook":"*"},"file":{"path":"routes/user.md","mtime":"2017-04-12T18:26:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-12T18:28:48.222Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Routes","level":"1.7","depth":1,"next":{"title":"User","level":"1.7.1","depth":2,"path":"routes/user.md","ref":"routes/user.md","articles":[]},"previous":{"title":"Update User Details","level":"1.6.7","depth":2,"path":"sequence-diagrams/update-user-details.md","ref":"sequence-diagrams/update-user-details.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/GeekyAnts/native-base-market-taxi-app-backend-docs/tree/master"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"TaxiApp-Backend","gitbook":"*"},"file":{"path":"routes/user.md","mtime":"2017-04-13T07:46:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-13T08:06:36.942Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
